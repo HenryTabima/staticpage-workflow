@@ -1,11 +1,13 @@
+block config
+  - var pageTitle= 'Page Title'
+
 doctype
 html(lang="es")
   head
     meta(charset="utf-8")
-    block title
-    link(rel="stylesheet",href="/css/estilos.css")
+    title #{pageTitle}
+
   body
     block main
+    link(rel="stylesheet",href="/css/estilos.css")
     script(src='js/scripts.js')
-
-    
