@@ -15,10 +15,10 @@ var rename = require('gulp-rename');
 var gulpif = require('gulp-if');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var env = require('gulp-environment');
 
 var webpackConfig = { module: { loaders: [{ test: /(\.js|.jsx)$/, loader: 'babel', exclude: '/node_modules/', query: { presets: ['es2015'] }}]}};
 
-var env = require('gulp-environment');
 
 gulp.task('set-production', function () {
   env.current = 'production';
